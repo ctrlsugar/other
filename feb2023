@@ -459,7 +459,7 @@ margin-top:10px; } .sugarhoney .slider {height: 100%; white-space: nowrap; font-
     <div id="overlay">
         <a  title="learn more." href="{text:Featured One Url}">
         <div id="name">{text:Featured One Title}</div>
-        <div id="fandom">{text:Featured One Title}</div></a>
+        <div id="fandom">{text:Featured One Subtitle}</div></a>
     </div>
 </div>
 
