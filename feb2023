@@ -98,7 +98,7 @@ $(document).ready(function() {
     <meta name="text:font size" content="13px"/>
     
     <meta name="image:Background" content="" />
-    <meta name="image:Sidebar Icon" content="{UserPortrait-96}" />
+    <meta name="image:Sidebar Icon" content="{Favicon}" />
     <meta name="text:Title" content="title here."/>
 
     <meta name="text:Description" content="lorem ipsum dolor sit amet, consectetuer adipiscing elit. aliquam nisi lorem, pulvinar id, commodo feugiat, vehicula et, mauris. aliquam mattis porta urna." />
@@ -213,13 +213,13 @@ strike, strike a, strike i, strike b, strike strong, strike em { text-decoration
      margin:0 0 0 var(--spacing-md);
 }
 
-main.container { position:fixed; background:var(--container); width:calc(400px + 500px); height:650px; margin:0px auto;  top:50%; left:50%; margin-left:-450px; margin-top:-350px; overflow:auto; border: 1px solid var(--borders); border-radius:10px;}
+main.container { position:fixed; background:var(--container); width:calc(400px + 540px); height:650px; margin:0px auto;  top:50%; left:50%; margin-left:-470px; margin-top:-350px; overflow:auto; border: 1px solid var(--borders); border-radius:10px;}
  
 section { width:calc(100% - 400px); margin-top:-75px; margin-left:350px;   padding-bottom:150px;}
 
 article h1 {margin:0;}
 
-article {background:var(--posts); width:500px; border:1px solid var(--borders); border-top-left-radius:var(--spacing-sm);border-top-right-radius:var(--spacing-sm); margin:calc(var(--spacing-lg) * 4) auto;}
+article {background:var(--posts); width:540px; border:1px solid var(--borders); border-top-left-radius:var(--spacing-sm);border-top-right-radius:var(--spacing-sm); margin:calc(var(--spacing-lg) * 4) auto;}
 
 ol.notes { margin:0px -40px; margin-top:85px; }
 ol.notes li { padding:10px; list-style:none;margin-bottom:10px;  background:var(--posts); border:1px solid var(--borders); border-radius:3px;}
@@ -295,11 +295,11 @@ ul.chat li { list-style:none; margin:10px; padding:5px 10px; background:var(--bo
 
 .link-excerpt { line-height:var(--font-size); background:var(--posts); padding:10px; border-radius:var(--spacing-sm);}
 
-.audio > iframe { max-width:500px; width:100%; }
+.audio > iframe { max-width:540px; width:100%; }
 
 iframe.spotify_audio_player, iframe.soundcloud_audio_player { height: 80px!important; }
 
-.video > iframe, video#embed { max-width: 500px; max-width: 100%; }
+.video > iframe, video#embed { max-width: 540px; max-width: 100%; }
 
 .question-username { background:var(--posts); padding:25px; border-top-left-radius:var(--spacing-sm); border-top-right-radius:var(--spacing-sm); border-bottom:var(--borders) 1px solid; text-align:center; font-size:16px; font-weight:bold; color:var(--links); text-transform:lowercase;}
 
@@ -337,24 +337,22 @@ article { padding-bottom:0px; }
 .sfm input {background-color:transparent; border:none;text-transform:lowercase;text-align:right;font-size:var(--font-size);  right:0;position:fixed; top:0; margin-right:15px; margin-top:17px; }
 
 
-.sugarhoney {position: relative; overflow: hidden; height:210px;width:260px;
-margin-top:10px; } .sugarhoney .slider {height: 100%; white-space: nowrap; font-size: 0; transition:2s; }
+.sugarhoney {position: relative; overflow: hidden; height:210px;width:250px;
+margin-top:10px; } 
 
-.sugarhoney .slider > * { font-size: 1rem;display: inline-block;white-space: normal;vertical-align: top;height: 100%;
-	width:260px; 
+
+.sugarhoney .slider {height: 100%; white-space: nowrap; font-size: 0; transition:2s; }
+
+.sugarhoney .slider > * { font-size: 1rem;display: inline-block;white-space: normal;vertical-align: top;
+	width:250px; border-radius:10px; height:150px;
 	background: none 50% no-repeat;
-	background-size: cover;
+	background-size:fit cover; object-fit:cover;
 }
 
-.sugarhoney .slider img { object-fit:cover;width:250px; height:150px; border-radius:10px;}
 
-.muse:hover #overlay { opacity:1; transition:2s;}
+h4 { position:relative; margin-top:55px; text-transform:uppercase; text-align:center; font-weight:700; font-size:25px;letter-spacing:1px; color:white; width:250px; z-index:9999;}
 
- #overlay { border-radius:10px;width:250px; height:150px; background:rgba(0,0,0,.5); z-index:999999; margin-top:-155px; position:fixed; opacity:0; transition:2s;}
-
-.slider #name { position:fixed; margin-top:55px; text-transform:uppercase; text-align:center; font-weight:700; font-size:25px;letter-spacing:1px; color:white; width:250px; z-index:9999;}
-
-.slider #fandom { position:fixed; width:250px; text-transform:uppercase; font-size:9px; letter-spacing:4px; font-weight:100; text-align:center; color:white; margin-top:73px; z-index:9999;}
+h5 { width:250px; text-transform:uppercase; font-size:9px; letter-spacing:4px; font-weight:100; text-align:center; color:white; margin-top:-38px; z-index:9999;}
 
  
 .sugarhoney .bullets {
@@ -363,7 +361,7 @@ margin-top:10px; } .sugarhoney .slider {height: 100%; white-space: nowrap; font-
 	bottom:0; 
 	padding: 10px 0;
 	width: 100%;
-	text-align: center;
+	text-align: center; 
 }
 .sugarhoney .bullets > a {
 	display: inline-block;
@@ -454,55 +452,38 @@ margin-top:10px; } .sugarhoney .slider {height: 100%; white-space: nowrap; font-
   <div class="slider">
 
 
-<div class="muse">
-    <img src="{image:Featured One}">
-    <div id="overlay">
-        <a  title="learn more." href="{text:Featured One Url}">
-        <div id="name">{text:Featured One Title}</div>
-        <div id="fandom">{text:Featured One Subtitle}</div></a>
-    </div>
+<div style="background:url('{image:Featured One}')">
+
+        <a title="learn more." href="{text:Featured One Url}">
+        <h4>{text:Featured One Title}</h4>
+        <h5>{text:Featured One Subtitle}</h5></a>
+
 </div>
 
-<div class="muse">
-    <img src="{image:Featured Two}">
-    <div id="overlay">
-        <a  title="learn more." href="{text:Featured Two Url}">
-        <div id="name">{text:Featured Two Title}</div>
-        <div id="fandom">{text:Featured Two Subtitle}</div></a>
-    </div>
+<div style="background-image:url('{image:Featured Two}')">
+
+        <a title="learn more." href="{text:Featured Two Url}">
+        <h4>{text:Featured Two Title}</h4>
+        <h5>{text:Featured Two Subtitle}</h5></a>
+
 </div>
 
-<div class="muse">
-    <img src="{image:Featured Three}">
-    <div id="overlay">
-        <a  title="learn more." href="{text:Featured Three Url}">
-        <div id="name">{text:Featured Three Title}</div>
-        <div id="fandom">{text:Featured Three Subtitle}</div></a>
-    </div>
-</div>
-
-
-<div class="muse">
-    <img src="{image:Featured Four}">
-    <div id="overlay">
-        <a  title="learn more." href="{text:Featured Four Url}">
-        <div id="name">{text:Featured Four Title}</div>
-        <div id="fandom">{text:Featured Four Subtitle}</div></a>
-    </div>
-</div>
-
-
-    
-    
-
-
-
-
-
-  </div>
+<div style="background-image:url('{image:Featured Three}')">
   
+    <a title="learn more." href="{text:Featured Three Url}">
+    <h4>{text:Featured Three Title}</h4>
+        <h5>{text:Featured Three Subtitle}</h5></a>
+
+</div>
 
 
+<div style="background-image:url('{image:Featured Four}')">
+    <a title="learn more." href="{text:Featured Three Url}">
+    <h4>{text:Featured Four Title}</h4>
+        <h5>{text:Featured Four Subtitle}</h5></a>
+</div>
+
+</div>
   <div class="bullets">
     <a href="#s1"></a>
     <a href="#s2"></a>
