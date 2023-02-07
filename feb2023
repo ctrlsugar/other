@@ -90,7 +90,7 @@ $(document).ready(function() {
     <meta name="color:text" content="#2a2a2a" />
     <meta name="color:container" content="#f6f6f6"/>
     <meta name="color:border" content="#eeeeee"/>
-    <meta name="color:links" content="##9eafbc"/>
+    <meta name="color:links" content="#9eafbc"/>
     <meta name="color:accent" content="#c9a0a0" />
     <meta name="color:posts" content="#fff" />
     <meta name="if:full background" content="" />
@@ -213,13 +213,13 @@ strike, strike a, strike i, strike b, strike strong, strike em { text-decoration
      margin:0 0 0 var(--spacing-md);
 }
 
-main.container { position:fixed; background:var(--container); width:calc(400px + {text:Posts Width}); height:650px; margin:0px auto;  top:50%; left:50%; margin-left:-450px; margin-top:-350px; overflow:auto; border: 1px solid var(--borders); border-radius:10px;}
+main.container { position:fixed; background:var(--container); width:calc(400px + 500px); height:650px; margin:0px auto;  top:50%; left:50%; margin-left:-450px; margin-top:-350px; overflow:auto; border: 1px solid var(--borders); border-radius:10px;}
  
 section { width:calc(100% - 400px); margin-top:-75px; margin-left:350px;   padding-bottom:150px;}
 
 article h1 {margin:0;}
 
-article {background:var(--posts); width:{text:Posts Width}; border:1px solid var(--borders); border-top-left-radius:var(--spacing-sm);border-top-right-radius:var(--spacing-sm); margin:calc(var(--spacing-lg) * 4) auto;}
+article {background:var(--posts); width:500px; border:1px solid var(--borders); border-top-left-radius:var(--spacing-sm);border-top-right-radius:var(--spacing-sm); margin:calc(var(--spacing-lg) * 4) auto;}
 
 ol.notes { margin:0px -40px; margin-top:85px; }
 ol.notes li { padding:10px; list-style:none;margin-bottom:10px;  background:var(--posts); border:1px solid var(--borders); border-radius:3px;}
@@ -295,11 +295,11 @@ ul.chat li { list-style:none; margin:10px; padding:5px 10px; background:var(--bo
 
 .link-excerpt { line-height:var(--font-size); background:var(--posts); padding:10px; border-radius:var(--spacing-sm);}
 
-.audio > iframe { max-width:{text:posts width}; width:100%; }
+.audio > iframe { max-width:500px; width:100%; }
 
 iframe.spotify_audio_player, iframe.soundcloud_audio_player { height: 80px!important; }
 
-.video > iframe, video#embed { max-width: {text:Posts Width}; max-width: 100%; }
+.video > iframe, video#embed { max-width: 500px; max-width: 100%; }
 
 .question-username { background:var(--posts); padding:25px; border-top-left-radius:var(--spacing-sm); border-top-right-radius:var(--spacing-sm); border-bottom:var(--borders) 1px solid; text-align:center; font-size:16px; font-weight:bold; color:var(--links); text-transform:lowercase;}
 
