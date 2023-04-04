@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!--
+
+
+         
+         CREATED & DESIGNED BY AUTUMN / SUGARCODES / TUMBLR
+       
+        - fonts from google fonts
+        - icons from cappuccicons / by suiomi
+        - base code(s) by seyche, silbrigthemes & neonbikethemes
+        - responsive video code by nouvae
+        - npf photosets fix by glenthemes
+        - style my tootltips by malihu (https://manos.malihu.gr)
+        - css photoset & fix by annasthms and eggdesign
+        
+
+       
+FOR TROUBLESHOOTING AND OTHER INQUIRES PLEASE CONTACT - SUGARHONEYCODES.TUMBLR.COM - BY USING THIS THEME YOU ACCEPT OUR TERMS OF SERVICE.
+   
+   - this work is not to be redistributed
+   - do not remove the credit - no exceptions.
+   - do not use as a base code
+   - you may edit the code - but credit must stay in tact 
+
+        This work is protected by a creative commons
+        Attribution-NonCommercial-NoDerivatives 4.0 International
+        (CC BY-NC-ND 4.0)
+        license.
+
+-->
+
+{block:Description}
+<meta name="description" content="{MetaDescription}" />
+{/block:Description}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{Title}{block:TagPage} - {Tag} {/block:TagPage} {block:SearchPage} - {lang:Search results for SearchQuery}{/block:SearchPage}{block:PostSummary}- {PostSummary} {/block:PostSummary}</title>
+<link rel="shortcut icon" href="{Favicon}">
+<link rel="alternate" type="application/rss+xml" href="{RSS}">
+
+<!-- IMPORTED SCRIPTS - DON'T REMOVE -->
+
+<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+<script src="https://static.tumblr.com/wgijwsy/Ebfm2v4gy/jquery.masonry.min.js"></script>
+
+<script src="//pull.cappuccicons.com/cpf.js"></script>
+
+<script src="https://kit.fontawesome.com/e45a4660e7.js" crossorigin="anonymous"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Playfair Display:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script src="https://static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+    
+
+    
+    
+    
+    
+    
+    <script>
+    (function($){
+    $(document).ready(function(){
+    $("a[title]").style_my_tooltips({
+    tip_follows_cursor:true,
+    tip_delay_time:90,
+    tip_fade_speed:600,
+    attribute:"title"
+    });
+    });
+    })(jQuery);
+    </script>
+
+
+
+   
+      <!--HANDLEBARS.JS-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+  
+  <!--PAGE SETTINGS-->
+  <!--The template spreadsheet is here:
+https://docs.google.com/spreadsheets/d/124yZTS885Mx4BYFN4PPxjP450LrRrTMmTubI0MoI4WE/edit?usp=sharing
+Instructions are in the "INSTRUCTIONS" tab.-->
+  
+  <script>
+    /*TO GET THE SHEET ID:
+    1. Go to your spreadsheet > File > Publish to web.
+    2. Click on "Entire Document" and select the speficic sheet (in the
+       example it is called "MAIN") > publish, ignore the URL.
+    3. File > Share > Anyone with link can share. This URL is important.
+    4. Copy the following string from the URL and paste it in sheetID:
+       Example:
+     https://docs.google.com/spreadsheets/d//edit?usp=sharing
+    TO GET API KEY:
+    1. Go to https://console.cloud.google.com/projectselector2/apis/dashboard 
+    (of the account the sheet is under)
+    2. Create new project
+    3. Create credentials, choose API key (copy this)
+    4. Restrict application access to HTTP referrer and add the wildcard yoururl.tumblr.com/* (or for multipe sites if needed)
+    5. Libraries > search for Google Sheets > Enable*/
+const sheetID = '1AwiE6o2IsTREkOMkpDMNr1_JwcUffht5AGjHhsyF_2c'; 
+const sheetTab = 'muses';
+const APIkey = 'AIzaSyACc17LmafrK4NI1WvuwGFLlOLhG4N0tFc';
+  </script>
+
+  <!--SHEET INTEGRATION-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/n0nspace/tumblr-sheets@main/nnspc-sheets.js"></script>
+
+
+    
+<style>
+
+
+:root {
+    --background: #f6f6f6;
+    --posts:#ffffff;
+    --text:#575454;
+    --borders: #eeeeee;
+    --container: #121212;
+    --one:#9d8189;
+    --two:#c1d0c7;
+    --three:#d8adb3;
+    
+
+    
+    
+    --background-img:URL;
+    --body-font:'Poppins';
+    --accent-font:'Playfair Display';
+    --font-size:13px;
+}    
+
+    .iframe-controls--desktop { position:fixed; top:0px; right:0px; z-index:999999999999;  text-shadow:none; box-shadow:none; display:none;}
+
+    ::-webkit-scrollbar { width:6px; }
+    ::-webkit-scrollbar-track { background:var(--container); }
+    ::-webkit-scrollbar-thumb { background:var(--three); }
+    
+    a { text-decoration:none; color:var(--two);}
+    
+    a:hover { transition:all 2s linear; cursor:pointer; }
+    
+    small, big { font-size:var(--font-size); }
+    
+    img { max-width:100%; height:auto; }
+    
+    u { background:var(--three); padding:0 5px; outline:none; border:none; text-decoration:none; font-style:italic; color:var(--background); }
+    
+    blockquote { margin:10px; padding:0px; padding-left:15px; border-left:2px solid var(--two); }
+    
+    blockquote blockquote { padding-left:15px; margin-left:0px; border-color:var(--three); }
+    
+    #s-m-t-tooltip { max-width:200px; margin:15px; text-align:center; font-weight:500; text-transform:lowercase; padding:3px 15px; z-index:999999999999999999999;color:var(--two); border-radius:25px; background:var(--borders); font-size:var(--font-size); }
+
+    
+    b, strong { font-weight:900; color:var(--two);}
+    
+    i, em { color:var(--three); }
+
+ul, ol { list-style:none; margin-left:-30px; margin-top:0px;}
+
+ul {  line-height:140% }
+   
+ol li:before {font-weight: 900;  content:'⸻'; margin-right:10px; font-size:9px; color:var(--one); } ol li { margin-left:0px; font-weight:300; color:var(--three); } ol li:hover { margin-left:5px; transition:all 2s ease; cursor:crosshair; }
+   
+ul li:before { font-family:"Font Awesome 5 Free"; font-weight: 900;  content:'\f00c'; margin-right:10px; font-size:9px; color:var(--two); }
+      
+      hr { width:150px; margin:0 auto; margin-top:25px; margin-bottom:25px; text-align:center; float:center; border-width: 5px 0px 0px 0px; border-style: solid; border-color:var(--container); }
+      
+      .more { font-family:'var(--accent-font)'; text-transform:uppercase; text-align:center; padding:15px; background:var(--two); color:var(--borders); margin:25px 0px; width:450px; box-sizing:border-box;}
+      
+      .more:hover { background:var(--three); transition:2s all linear; cursor:pointer; }
+    
+    body { font-family:var(--body-font), sans-serif; font-size:var(--font-size); font-weight:300; letter-spacing:1px; line-height:200%; color:var(--text); text-align:justify; background:var(--background); background-image:url(var(--background-img)); background-position:top left; background-attachment:fixed; background-size:cover;  }
+
+#sugar { position:fixed; bottom:0; right:0;  margin:15px;} #sugar a { border:none; color:var(--one);}
+
+#sidebar { width:100vw; top:0; left:0; position:fixed; background:var(--container); height:55px;  text-align:center; box-shadow:2px 2px 2px rgba(0,0,0,.05);}
+
+#navigation { background:var(--borders); text-align:left; width:100vw; position:fixed;padding:15px 0px; bottom:0; left:0; padding:10px 0px; text-transform:uppercase; font-size:10px; vertical-align:center; font-weight:700; z-index:999999999999;}
+
+#title { font-family:var(--accent-font); font-size:18px; margin-top:15px; position:fixed; width:350px; text-align:left; margin-left:20px; color:var(--two); font-weight:700; }
+
+.filters { font-family: 'Poppins', sans-serif;}
+
+#filter { font-family: 'Poppins', sans-serif; }
+
+.button-group { display:inline-block;margin-left:15px; }
+
+button { background:transparent; color:var(--three); padding:0px; margin:0px; outline:none; font-family: 'Poppins', sans-serif; border:none;  } .button { font-family: 'Poppins', sans-serif; font-size:13px; color:var(--text); line-height:9px; margin:5px; margin-top:0px; margin-bottom:0px; text-align:left; display:inline-block;} .button:hover { cursor:pointer; }
+
+.button:before { content:'\f0c8'; font-family: "Font Awesome 5 Free"; font-weight: 500;  font-size:12px; border:none; color:var(--three); margin-right:7px;}
+
+
+.is-checked:before { content:'\f14a'; font-family: "Font Awesome 5 Free"; font-weight: 500;  font-size:12px; border:none; color:var(--two); margin-right:7px;}
+
+.is-checked { color:var(--three); font-weight:500; }
+
+.main { width:calc(100vw - 24px); height:calc(100vh - 125px); overflow:auto; position:absolute; margin:0 auto; text-align:center; box-sizing:border-box; padding:12px; padding-bottom:100px; z-index:99;} 
+
+  
+  #link { display:inline-block; color:var(--text); margin:5px; margin-top:17px; width:50px; font-size:10px; font-style:normal; font-weight:300;  line-height:17px;} #link i { font-size:21px; color:var(--three); }
+  
+  #name a { color:var(--text); }
+
+.muse { display:inline-block; position:relative; float:center; border-radius:3px; width:350px; height:auto; background:var(--posts); margin:10px;margin-bottom:20px; text-align:left; box-shadow:2px 2px 2px rgba(0,0,0,.05);} 
+
+
+#mu img { border-top-left-radius:5px; position:absolute; width:215px; height:210px; object-fit: cover;  }
+
+#name {  font-family:var(--body-font), sans-serif; font-size:11px; font-weight:300; font-style:italic; text-align:center; margin-top:220px;letter-spacing:1px; color:var(--text);} #name i { color:var(--three); }
+
+.one, .two, .three, .four { width:125px; height:100px; background:var(--one);  position:absolute; margin-left:225px;} .two { margin-top:110px; border-top-left-radius:0px; }
+
+.three, .four { margin-top:85px; }
+.one img, .two img, .three img, .four img { width:125px; height:100px; object-fit: cover;
+}
+
+.one{ border-top-right-radius:5px; }
+
+.one img { border-top-right-radius:5px; }
+
+#description { width:350px;  box-sizing:border-box; text-align:center; line-height:145%;  padding:25px; background:var(--borders); margin-top:15px; } .description {  width:300px; height:130px;overflow:auto; } .description::-webkit-scrollbar { width:0px; }
+
+#links { width:350px; background:var(--two); color:var(--posts);padding:15px 40px; line-height:100%;box-sizing:border-box; border-bottom-left-radius:5px; font-weight:300; margin-top:25px; font-size:18px; text-transform:lowercase; border-bottom-right-radius:5px;  text-align:center; position:absolute; bottom:0px;} 
+
+#links i { color:var(--background); font-weight:500; text-align:center;} .fa-laptop-code { color:var(--one); }
+
+
+h2 { font-weight:700; color:var(--one); font-size:20px; margin:0px; text-align:center;}
+
+
+#title { line-height:15px; }
+
+#title span { font-family:var(--body-font), sans-serif; font-weight:500; letter-spacing:1px; line-height:10px;}
+
+#back { top:0; left:0; margin:25px; font-weight:bold; background:var(--one); color:var(--background); position:fixed; text-transform:uppercase;font-size:9px; padding:2px 10px; border-radius:5px; letter-spacing:0px;} 
+
+.quicksearch { text-align:center; background:var(--background); border:none; outline:none;text-transform:lowercase; font-family:var(--body-font); color:var(--links); width:150px; float:right;margin-right:25px; padding:5px 15px; border-radius:3px;}
+
+</style>
+
+</head>
+<body>
+
+
+<div id="navigation">
+    
+<div class="filters">
+     <div class="button-group" data-filter-group="one" style="display:inline-block;">
+ <button class="button is-checked" data-filter="">gender</button>
+ <button class="button" data-filter=".f">women</button>
+ <button class="button" data-filter=".m">men</button>
+  <button class="button" data-filter=".nb">non binary</button>
+ </div>
+
+ <div class="button-group" data-filter-group="two" style="display:inline-block;">
+ <button class="button is-checked" data-filter="">age</button>
+ <button class="button" data-filter=".20">20s</button>
+  <button class="button" data-filter=".30">30s</button>
+   <button class="button" data-filter=".40">40s</button>
+    <button class="button" data-filter=".50">50+</button>
+</div>
+
+ <div class="button-group" data-filter-group="two" style="display:inline-block;">
+ <button class="button is-checked" data-filter="">other</button>
+ <button class="button" data-filter=".poc">poc</button>
+   <button class="button" data-filter=".canon">canon based</button>
+  <button class="button" data-filter=".new">new !</button>
+</div>
+
+
+<input type="text" class="quicksearch" placeholder="search for muse" />  
+</div>
+</div>
+
+
+<div class="main">
+
+
+ <script id="handlebars-template-grid" type="text/x-handlebars-template">
+      {{#each []}}  
+        
+
+
+<div class="muse {{this.type}} {{this.filters}}">
+<div id="mu"><img src="{{this.one}}"></div>
+<div class="one"><img src="{{this.two}}"></div>  
+<div class="two"><img src="{{this.three}}"></div>
+    
+<div id="name">
+<a href="{{this.tag}}">
+<div id="link"><i class="fa-solid fa-hashtag" style="color:var(--one);" ></i><br>
+<span>tag</span></div></a>
+
+<a href="{{this.playlist}}">
+<div id="link"><i class="fa-brands fa-spotify" style="color:var(--one);" ></i><br>
+<span>playlist</span></div></a>
+
+<a href="{{this.claim}}">
+<div id="link"><i class="fa-solid fa-heart"></i><br>
+<span>claim</span></div></a>
+
+
+<a href="{{this.pinterest}}">
+<div id="link"><i class="fa-brands fa-pinterest"></i><br>
+<span>pinterest</span></div></a>
+
+<a href="{{this.doc}}">
+<div id="link"><i class="fa-solid fa-file"></i><br>
+<span> doc</span></div></a>
+
+        </div>
+        
+<div id="description"><div class="description"> 
+
+<i>{{this.face}}.</i>
+<br><br>
+
+ {{this.description}}. 
+</div></div>        
+
+
+<div id="links"> {{this.full}}</div>
+    </div>
+    
+    {{/each}}
+
+
+</script>
+
+
+    
+</div>
+
+    
+    
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script> <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>   
+     <script>
+  //TEMPLATE LIST
+  //id + selector
+  var templateList = [
+    ['#handlebars-template-grid', '.main'],
+  ];
+  
+    const contentLoaded = function() { 
+        
+        
+// store filter for each group
+var buttonFilters = {};
+var buttonFilter;
+// quick search regex
+var qsRegex;
+
+// init Isotope
+var $grid = $('.main').isotope({
+   
+  itemSelector: '.muse',
+    layoutMode: 'masonry',
+  filter: function() {
+    var $this = $(this);
+    var searchResult = qsRegex ? $this.text().match( qsRegex ) : true;
+    var buttonResult = buttonFilter ? $this.is( buttonFilter ) : true;
+    return searchResult && buttonResult;
+  },
+   
+});
+
+
+$('.filters').on( 'click', '.button', function() {
+  var $this = $(this);
+  // get group key
+  var $buttonGroup = $this.parents('.button-group');
+  var filterGroup = $buttonGroup.attr('data-filter-group');
+  // set filter for group
+  buttonFilters[ filterGroup ] = $this.attr('data-filter');
+  // combine filters
+  buttonFilter = concatValues( buttonFilters );
+  // Isotope arrange
+  $grid.isotope();
+});
+
+// use value of search field to filter
+var $quicksearch = $('.quicksearch').keyup( debounce( function() {
+  qsRegex = new RegExp( $quicksearch.val(), 'gi' );
+  $grid.isotope();
+}) );
+
+// change is-checked class on buttons
+$('.button-group').each( function( i, buttonGroup ) {
+  var $buttonGroup = $( buttonGroup );
+  $buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+  });
+});
+ 
+
+// debounce so filtering doesn't happen every millisecond
+function debounce( fn, threshold ) {
+  var timeout;
+  threshold = threshold || 100;
+  return function debounced() {
+    clearTimeout( timeout );
+    var args = arguments;
+    var _this = this;
+    function delayed() {
+      fn.apply( _this, args );
+    }
+    timeout = setTimeout( delayed, threshold );
+  };
+}
+
+// flatten object by concatting values
+function concatValues( obj ) {
+  var value = '';
+  for ( var prop in obj ) {
+    value += obj[ prop ];
+  }
+  return value;
+}
+
+}
+
+
+
+  </script>
+    
+
+      </body>
+
+</html>
