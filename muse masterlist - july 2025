@@ -1,0 +1,391 @@
+
+<!DOCTYPE html>
+<html>
+  
+       
+<!--
+
+
+         PAGE 53 / CLICHE / CTRLSUGAR / TUMBLR
+         CREATED & DESIGNED BY SUGAR
+
+       
+        - fonts from google fonts
+        - icons from bootstrap & fontawesome
+        - spreadsheet integration by nonspace.dev
+
+       
+FOR TROUBLESHOOTING AND OTHER INQUIRES PLEASE CONTACT - SUGARCODES.TUMBLR.COM - BY USING THIS THEME YOU ACCEPT OUR TERMS OF SERVICE.
+   
+   - this work is not to be redistributed
+   - do not remove the credit - no exceptions.
+   - do not use as a base code
+   - you may edit the code - but credit must stay in tact 
+
+        This work is protected by a creative commons
+        Attribution-NonCommercial-NoDerivatives 4.0 International
+        (CC BY-NC-ND 4.0)
+        license.
+-->
+ 
+   
+<head>
+     <style>figure{margin:0}.tmblr-iframe{position:absolute}.tmblr-iframe.hide{display:none}.tmblr-iframe--amp-cta-button{visibility:hidden;position:fixed;bottom:10px;left:50%;transform:translateX(-50%);z-index:100}.tmblr-iframe--amp-cta-button.tmblr-iframe--loaded{visibility:visible;animation:iframe-app-cta-transition .2s ease-out}</style><link rel="stylesheet" media="screen" href="https://assets.tumblr.com/client/prod/standalone/blog-network-npf/index.build.css?_v=f085dde138e244526309d4673db67b4c"><link rel="shortcut icon" href="https://64.media.tumblr.com/29ed571b84de16f320cfb13453c656ce/63d86dda6ced5f5b-e7/s128x128u_c1/7bdcf58d6495680d6ffbe8b82537ec6ddf63f87d.jpg" />
+     <link rel="alternate" type="application/rss+xml" href="https://novembermuses.tumblr.com/rss" />
+        <title>ivy.</title>
+      
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+       
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+<script language="javascript" type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+
+<script src="https://kit.fontawesome.com/e45a4660e7.js" crossorigin="anonymous"></script>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<script src="https://dl.dropbox.com/s/nblwh70cu3ww4w4/sucre.js"></script>
+
+   
+      <!--HANDLEBARS.JS-->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+  
+  <!-- https://docs.google.com/spreadsheets/d/1s_rKfdn95MQftny--JJsXwTHvycPL6pskHxuRm8RYTE/edit?usp=sharing-->
+
+  <script>
+
+    const sheetID = '1s_rKfdn95MQftny--JJsXwTHvycPL6pskHxuRm8RYTE';
+    const sheetTab = 'muses';
+    const APIkey = 'AIzaSyDt72jOyPEzIsu7cWOgzJ41KuLhpYPHXlc';
+
+  </script>
+  
+
+  <!--SHEET INTEGRATION-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/n0nspace/tumblr-sheets@main/nnspc-sheets.js"></script>
+  
+<style>
+
+
+:root {
+    --background:#191718;
+    --container:#3c383c;
+    --borders:#1d1d1d;
+    --posts:#131212;
+    --links:#677865;
+    --accent:#b4847c;
+    --three:#8c6362;
+    --text:#d9d6d6;
+
+    
+    
+    --background-img:URL;
+    --body-font:'Poppins';
+    --accent-font:'Playfair Display';
+    --font-size:12px;
+} 
+        
+* {box-sizing:border-box;}
+
+.tmblr-iframe{position:absolute;display:none;}
+
+body { margin:0; background-color: var(--background); font-family:var(--body-font);  color:var(--text); word-wrap:break-word; font-size:var(--font-size); line-height: 175%; word-wrap: break-word; margin: 0; padding: 0; -moz-osx-font-smoothing:grayscale;  -webkit-font-smoothing:antialiased; font-smoothing:antialiased;  -webkit-animation: fadein 1.5s; -moz-animation:fadein 1.5s;
+ animation:fadein 1.5s; text-align:justify; }
+
+small, big { font-size:var(--font-size); }
+
+b, strong { color:var(--accent); font-weight:700; }
+
+i, em { color:var(--links); }
+
+a {  text-decoration:none; color:var(--links); border-bottom:2px solid var(--accent);}
+
+strike, strike a, strike i, strike b, strike strong, strike em { text-decoration:none; background:var(--borders); color:var(--borders);} strike:hover { background:none; color:var(--text); transition:ease-in-out all 2s; cursor:zoom-in;}
+
+*::-webkit-scrollbar { width: 5px;  z-index:9;}
+*::-webkit-scrollbar-track { background: var(--borders);}
+*::-webkit-scrollbar-thumb { background-color:var(--links);  }
+
+::selection { background-color:var(--accent); color:var(--posts) }
+::-moz-selection {  background-color:var(--accent); color:var(--posts);}
+::-o-selection {  background-color:var(--accent); color:var(--posts); }
+::-webkit-selection {  background-color:var(--accent); color:var(--posts); }
+
+ul { list-style:none; margin-left:-25px; margin-bottom:20px;}
+
+li:before { font-family:'Font Awesome 6 Free'; font-weight:900; content:'\f068'; color:var(--accent); margin-right:15px;}
+
+    u { background:var(--three); padding:0 5px; outline:none; border:none; text-decoration:none; font-style:italic; color:var(--background); }
+    
+    h2 { text-align:center; margin-top:0px; color:var(--links); font-family:'Playfair Display SC'; text-transform:lowercase;!important }
+    
+blockquote {border-left:2px solid var(--borders);padding-left:var(--spacing-sm); margin:0 0 0 var(--spacing-md);}
+
+#navigation { background:var(--borders); text-align:center; width:100vw; position:fixed;padding:15px 0px; top:0; margin-top:60px; left:0; padding:10px 0px; text-transform:uppercase; font-size:10px; vertical-align:center; font-weight:700; z-index:999999999999;}
+
+#title { font-family:var(--accent-font); font-size:18px; margin-top:15px; position:fixed; width:350px; text-align:left; margin-left:20px; color:var(--accent); font-weight:700; }
+
+.filters { }
+
+#filter {  }
+
+.button-group { display:inline-block;margin-left:15px; }
+
+button { background:transparent; color:var(--three); padding:0px; margin:0px; outline:none; border:none;  font-family: 'Poppins', sans-serif; } .button { font-family: 'Poppins', sans-serif; font-size:13px; color:var(--text); line-height:9px; margin:5px; margin-top:0px; margin-bottom:0px; text-align:left; display:inline-block;} .button:hover { cursor:pointer; }
+
+.button:before { content:'\f0c8'; font-family: "Font Awesome 5 Free"; font-weight: 500;  font-size:12px; border:none; color:var(--links); margin-right:7px;}
+
+
+.is-checked:before { content:'\f14a'; font-family: "Font Awesome 5 Free"; font-weight: 500;  font-size:12px; border:none; color:var(--accent); margin-right:7px;}
+
+.is-checked { color:var(--links); }
+
+.main {  margin:0 auto; position:relative; margin-top:150px; text-align:center; width:calc(100vw - 120px); padding:0px 50px; height:calc(100vh - 150px); box-sizing:border-box;overflow-x:hidden; }
+
+#top { padding:20px 15px; width:100vw; font-weight:bold; position:fixed; top:0; left:0;text-align:center; font-size:16px; width:100vw; box-sizing:border-box; border-bottom:1px solid var(--posts); background:var(--background); color:var(--accent);display:block; z-index:999999999; text-align:center;} #top span { float:left; } #top a { color:var(--links); border:none; } #top i { color:var(--links); }
+
+#sugarhoney { position:fixed; bottom:0; right:0; margin:10px; margin-right:10px; font-size:20px; margin-bottom:50px; }  
+
+
+.muse { width:350px; height:auto; background:var(--posts); border-radius:5px; margin:7px; margin-bottom:10px; border:1px solid var(--borders); display:inline-block;  padding-bottom:25px;}
+
+.top { padding:15px; border-bottom:1px solid var(--borders); background:var(--borders); height:75px;} .top img { width:45px; height:45px; object-fit:cover; border-radius:100%; padding:3px; border:3px solid var(--accent); display:inline-block; float:left; margin-right:15px;}
+
+.title { text-align:left; font-weight:300; margin-top:7px; font-size:8.5px;line-height:170%; letter-spacing:2px; text-transform:uppercase;}
+
+.title span {    font-size: 16px; text-transform:lowercase; letter-spacing:1px; font-weight:300; color:var(--accent); }
+
+#description { margin-bottom:0px; }
+
+.description {  padding:25px; padding-bottom:5px; line-height:150%; text-align:justify; } #description ::-webkit-scrollbar { width:0px; display:none; }
+
+.description img { width:400px; object-fit:cover; height:auto; margin-bottom:0px;}
+
+#links { margin-top:15px; font-size:16px; font-weight:700;}
+#links a { border:none; color:var(--links);}
+
+.tt { visibility: hidden; width: 120px;border:1px solid var(--borders); background-color:var(--posts); color:var(--accent); text-align: center; border-radius: 6px;padding: 10px; font-size:13px; position: absolute; margin-top:-250%; margin-left:-120px; z-index:9999999999999999; }
+
+a#link { border:none; }
+
+#link { float:right;font-size:27px;margin-top:-30px;margin-right:10px}
+
+#link .tt {position:absolute;margin-top:25px; margin-left:0px;}
+
+#link:hover .tt, #sugarhoney:hover .tt { visibility: visible; z-index:9999999999999999; }
+
+.link { width:125px; padding:7px 10px; background:var(--links); margin:5px; margin-bottom:7px; display:inline-block; border-radius:3px;}
+
+#connect { display:inline-block; width:70px; line-height:100%; margin:5px 10px; text-align:center; color:var(--links);} #connect img { width:60px; height:60px; object-fit:cover; border-radius:5px; }
+#connect span {font-size:9px; text-transform:uppercase; color:var(--text); } 
+
+.tabcontent { display:none;margin:0px; position:fixed;overflow:auto; z-index:99999999999999999999999999999999; width:100%; height:100vh; background:var(--posts); left:0; top:0; -webkit-animation: fadeEffect 2s; animation: fadeEffect 2s; }
+
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.close { top:0; right:0; z-index:999999999999; display:block; margin-left:215px; margin-right:5px; margin-top:5px; position:absolute; font-family:'Lora'; color:var(--two); text-transform:lowercase; font-size:11px;
+    text-align:right; } .close:hover { cursor:pointer; }
+
+
+#tab { width:600px; height:auto; padding:30px; position:relative; margin:0 auto; margin-top:50px; text-align:left; background:var(--background); margin-bottom:100px;} #tab img { width:600px; margin:-30px; margin-bottom:30px;}
+
+</style> 
+</head>  
+
+
+<body>
+
+
+<div id="top"><span><a href="/">
+  <i class="bi bi-x"></i>  </a></span> muse masterlist   
+</div>
+
+<div id="navigation">
+    
+<div class="filters">
+     <div class="button-group" data-filter-group="one" style="display:inline-block;">
+ <button class="button is-checked" data-filter="" style="color:var(--accent);">gender</button>
+ <button class="button" data-filter=".m">men</button>
+ <button class="button" data-filter=".f">women</button>
+  <button class="button" data-filter=".nb">non-binary</button>
+ </div>
+
+ <div class="button-group" data-filter-group="two" style="display:inline-block;">
+ <button class="button is-checked" data-filter="" style="color:var(--accent);">age</button>
+ <button class="button" data-filter=".20">20s</button>
+ <button class="button" data-filter=".30">30s</button>
+  <button class="button" data-filter=".40">40s</button>
+   <button class="button" data-filter=".50">50s</button>
+</div>
+<br>
+
+
+ <div class="button-group" data-filter-group="five" style="display:inline-block;">
+ <button class="button is-checked" data-filter="" style="color:var(--accent);">availibility</button>
+ <button class="button" data-filter=".closed">closed</button>
+ <button class="button" data-filter=".open">open</button>
+ <button class="button" data-filter=".retired">retired</button>
+</div>
+
+ <div class="button-group" data-filter-group="three" style="display:inline-block;">
+ <button class="button is-checked" data-filter="" style="color:var(--accent);">shipping</button>
+ <button class="button" data-filter=".single">single ship</button>
+ <button class="button" data-filter=".multi">multiship</button>
+</div>
+
+</div>
+</div>
+
+
+<div class="main">
+
+
+      <script id="handlebars-template-grid" type="text/x-handlebars-template">
+      {{#each []}}          
+<div class="muse {{this.filters}}">
+
+
+<div id="{{this.muse}}" class="tabcontent"><span onclick="this.parentElement.style.display='none'" class="close">close this tab</span><br><br>
+
+<div id="tab">
+
+<img src="{{this.photo}}">
+
+<h2> {{this.quote}} </h2>
+      
+      <ul><li> <b>name.</b> {{this.name}}
+      <li> <b>birthday & age</b> {{this.birthday}}, {{this.age}}
+      <li> <b>pronouns & sexuality.</b> {{this.pronouns}}, {{this.sexuality}}
+      <li> <b>occupation.</b> {{this.occupation}}
+      </ul>
+      
+   <u>personality.</u> <i>{{this.personality}}</i><br><br>
+   <u>likes & dislikes.</u> <i>likes</i> {{this.likes}} & <i>dislikes</i> {{this.dislikes}}<br><br>
+   <u>hobbies.</u> {{this.hobbies}}<br><br>
+   <u>favorites.</u> {{this.favorites}}<br><br>
+   <u>shipper.</u> {{this.shipper}}<br><br>
+   <u>background.</u> {{this.background}}<br><br>
+ 
+
+</div>
+
+
+
+</div>
+
+
+    <div class="top">
+        <img src="{{this.icon}}">
+        <div class="title"><span>{{this.name}}</span> <br>
+        {{this.claim}} — {{this.status}}
+        </div>
+           
+   
+        <div id="link" class="tablinks" onclick="opensucre(event, '{{this.muse}}')"><i class="bi bi-plus"></i></div>
+        </div>
+        
+   <div class="description">
+      <h2> {{this.quote}} </h2>
+      
+      <ul><li> <b>name.</b> {{this.name}}
+      <li> <b>birthday & age</b> {{this.birthday}}, {{this.age}}
+      <li> <b>pronouns & sexuality.</b> {{this.pronouns}}, {{this.sexuality}}
+      <li> <b>occupation.</b> {{this.occupation}}
+      </ul>
+      
+   <u>personality.</u> <i>{{this.personality}}</i>
+   </div>
+
+  
+
+
+
+
+ 
+</div>
+
+   {{/each}}
+    </script>
+ 
+
+
+</div>
+</div>
+</div>
+
+    
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js"></script>  
+     <script>
+  //TEMPLATE LIST
+  //id + selector
+  var templateList = [
+    ['#handlebars-template-grid', '.main'],
+  ];
+  
+    const contentLoaded = function() { 
+
+
+
+  // init Isotope
+  var $grid = $('.main').isotope({
+    itemSelector: '.muse',
+    masonry: {
+
+isFitWidth: true
+}
+  });
+  // filter functions
+ var filters = {};
+
+ $('.filters').on( 'click', '.button', function() {
+   var $this = $(this);
+   // get group key
+   var $buttonGroup = $this.parents('.button-group');
+   var filterGroup = $buttonGroup.attr('data-filter-group');
+   // set filter for group
+   filters[ filterGroup ] = $this.attr('data-filter');
+   // combine filters
+   var filterValue = concatValues( filters );
+   // set filter for Isotope
+   $grid.isotope({ filter: filterValue });
+ });
+
+ // change is-checked class on buttons
+ $('.button-group').each( function( i, buttonGroup ) {
+   var $buttonGroup = $( buttonGroup );
+   $buttonGroup.on( 'click', 'button', function() {
+     $buttonGroup.find('.is-checked').removeClass('is-checked');
+     $( this ).addClass('is-checked');
+   });
+ });
+
+  
+// flatten object by concatting values
+function concatValues( obj ) {
+ var value = '';
+ for ( var prop in obj ) {
+   value += obj[ prop ];
+ }
+ return value;
+}
+
+
+
+
+}
+  </script>
+    
+</body>
+
+</html>
